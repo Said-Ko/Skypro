@@ -1,0 +1,57 @@
+#Условие 1: Вывод приветственного письма
+print('Привет! Предлагаю проверить свои знания английского! \nНапиши, как тебя зовут')
+
+#Условие 2: Ввод строки, с дальнейшим выводом имени при помощи f-строки
+name_user = input()
+
+print(f'Привет, {name_user}, начнем тренировку!')
+
+#Условие 3: Создание вопроса 1
+print(f'\nВведите слово. \nВопрос 1: My name ____ Vova.')
+
+question1 = input()
+answer1 = 'is'
+true_answer =0
+point =0
+
+if question1 == answer1:
+    print(f'Ответ верный! \nВы получаете {true_answer} баллов!')
+    true_answer +=1
+    point +=10
+else:
+    print(f'Неправильно. \nПравильный ответ: {answer1}')
+
+
+#Создание вопроса 2
+print(f'\n\nВопрос 2: I ____ a coder.')
+
+question2 = input()
+answer2 = 'am'
+
+if question2 == answer2:
+    print(f'Ответ верный! \nВы получаете {true_answer} баллов!')
+    true_answer += 1
+    point += 10
+else:
+    print(f'Неправильно. \nПравильный ответ: {answer2}')
+
+#Создание вопроса 3
+print(f'\nВопрос 3: I live ____ Moscow.')
+
+question3 = input()
+answer3 = 'in'
+
+if question3 == answer3:
+    print(f'Ответ верный! \nВы получаете {true_answer} баллов!')
+    true_answer += 1
+    point += 10
+else:
+    print(f'Неправильно. \nПравильный ответ: {answer3}')
+
+#Условие 4: Итоговый результат
+print(f'''
+Вот и всё, {name_user}!
+Вы ответили на {true_answer} вопросов из 3 верно.
+Вы заработали {point} баллов.
+Это {(round(33.3*true_answer))} процентов.
+''')
