@@ -1,0 +1,24 @@
+questions = ["My name ___  Vova", "I ___ a coder", "I live ___ Moscow"]
+answers = ["is", "am", "in"]
+count_answer = 0
+
+#Команда Ready
+print("""Привет! 
+Предлагаю проверить свои знания английского! 
+Наберите "ready", чтобы начать!""")
+test_word = input()
+
+if test_word != 'ready':
+    print("Кажется, вы не хотите играть. Очень жаль.")
+else:                                                          #вопросы для знатаков
+    for i, question in enumerate(questions):
+        answer = input(f'{question}, \nвведите правильный ответ - ')
+        if answer == answers[i]:
+            print("Ответ верный!")
+            count_answer+=1
+        else:
+           print(f"Неправильно. Правильный ответ: {answers[i]}")
+
+#Подведение итогов
+percent = count_answer/len(questions)*100
+print(f"Вот и всё! Вы ответили на {count_answer} вопросов из {len(questions)} верно, это {round(percent)} процентов.")
